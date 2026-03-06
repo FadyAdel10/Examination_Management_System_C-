@@ -1,4 +1,10 @@
-﻿namespace Examination_Management_System
+﻿
+
+using Examination_Management_System.Answer_Files;
+using Examination_Management_System.Exam_Files;
+using Examination_Management_System.Question_Files;
+
+namespace Examination_Management_System
 {
     internal class Program
     {

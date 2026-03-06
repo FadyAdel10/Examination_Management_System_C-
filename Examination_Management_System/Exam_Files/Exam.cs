@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Examination_Management_System.Answer_Files;
+using Examination_Management_System.Question_Files;
+using System;
 using System.Collections.Generic;
 using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Timers;
 
-namespace Examination_Management_System
+namespace Examination_Management_System.Exam_Files
 {
     internal abstract class Exam: ICloneable, IComparable<Exam>
     {

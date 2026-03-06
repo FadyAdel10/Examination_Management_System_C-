@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Examination_Management_System.Answer_Files;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Examination_Management_System
+namespace Examination_Management_System.Question_Files
 {
     internal class ChooseOneQuestion: Question
     {

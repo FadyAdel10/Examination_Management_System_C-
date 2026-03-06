@@ -1,40 +1,45 @@
-﻿using System;
+﻿using Examination_Management_System.Answer_Files;
+using Examination_Management_System.Question_Files;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
-namespace Examination_Management_System
+namespace Examination_Management_System.Exam_Files
 {
-    internal class FinalExam: Exam
+    internal class PracticeExam: Exam
     {
-        public FinalExam(int time, int numberOfQuestions, Question[] questions,
+        public PracticeExam(int time, int numberOfQuestions, Question[] questions,
             Subject subject, ExamMode mode) : base(time, numberOfQuestions, questions, subject, mode)
         {
 
         }
-        public FinalExam(int time, int numberOfQuestions, Question[] questions, Dictionary<Question, AnswerList> questionAnswerDictionary,
-            Subject subject, ExamMode mode) : base(time, numberOfQuestions, questions, questionAnswerDictionary, subject, mode)
+        public PracticeExam(int time, int numberOfQuestions, Question[] questions, Dictionary<Question, AnswerList> questionAnswerDictionary,
+            Subject subject, ExamMode mode): base(time,numberOfQuestions,questions,questionAnswerDictionary,subject,mode)
         {
-
+            
         }
-        public FinalExam(FinalExam secondFinalExam) : base(secondFinalExam.Time, secondFinalExam.NumberOfQuestions, secondFinalExam.Questions,
-            secondFinalExam.QuestionAnswerDictionary, secondFinalExam.Subject, secondFinalExam.Mode)
+        public PracticeExam(PracticeExam secondPracticeExam) : base(secondPracticeExam.Time, secondPracticeExam.NumberOfQuestions, secondPracticeExam.Questions,
+            secondPracticeExam.QuestionAnswerDictionary, secondPracticeExam.Subject, secondPracticeExam.Mode)
         {
-
+            
         }
         public override void Finish()
         {
             base.Finish();
-            StringBuilder questionsAndStudentAnswers = new StringBuilder();
+            StringBuilder studentAnswers = new StringBuilder();
+            StringBuilder correctAnswers = new StringBuilder();
             foreach (var pair in QuestionAnswerDictionary)
             {
-                // show question
-                questionsAndStudentAnswers.Append($"Question:\n\n{pair.Key.ToString()}").Append("\n");
-                // show student answer
-                questionsAndStudentAnswers.Append($"Student answer:\n\n{pair.Value}").Append("\n\n");
+                correctAnswers.Append(pair.Key.CorrectAnswer.ToString()).Append("\n");
+                studentAnswers.Append(pair.Value.ToString()).Append("\n");
             }
-
-            //  Show only questions and student answers 
-            Console.WriteLine($"Questions and student answers:\n\n{questionsAndStudentAnswers.ToString()}");
+            //  Show student answers
+            Console.WriteLine($"Student answers:\n{studentAnswers.ToString()}");
+            //Show correct answers
+            Console.WriteLine($"Correct answers:\n{correctAnswers.ToString()}");
+            // Show final grade
+            Console.WriteLine($"Final grade: {base.CorrectExam()}");
         }
         // check is this correct implementation for ShowExam()
         public override void ShowExam()
@@ -42,7 +47,7 @@ namespace Examination_Management_System
             string examContent = base.ToString();
             Console.WriteLine("Practical exam: ");
             Console.WriteLine(examContent);
-            foreach (var question in Questions)
+            foreach(var question in Questions)
             {
                 AnswerList studentAnswer = new AnswerList();
                 bool valid = false;
@@ -79,10 +84,10 @@ namespace Examination_Management_System
                 }
                 else
                 {
-                    while (!valid)
+                    while(!valid)
                     {
                         string input = Console.ReadLine();
-                        if (!int.TryParse(input, out answerId))
+                        if(!int.TryParse(input, out answerId))
                         {
                             Console.WriteLine("Invalid number format. Try again.");
                             valid = false;
@@ -98,14 +103,15 @@ namespace Examination_Management_System
                         studentAnswer.Add(question.Answers.GetById(answerId));
                         valid = true;
                     }
-
+                    
                 }
                 QuestionAnswerDictionary.Add(question, studentAnswer);
             }
         }
+
         public override object Clone()
         {
-            return new FinalExam(this);
+            return new PracticeExam(this);
         }
     }
 }
