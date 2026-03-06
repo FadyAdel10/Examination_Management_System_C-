@@ -1,0 +1,14 @@
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\obj\Debug\net10.0\Examination_Management_System.GeneratedMSBuildEditorConfig.editorconfig
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\obj\Debug\net10.0\Examination_Management_System.AssemblyInfoInputs.cache
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\obj\Debug\net10.0\Examination_Management_System.AssemblyInfo.cs
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\obj\Debug\net10.0\Examination_Management_System.csproj.CoreCompileInputs.cache
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\bin\Debug\net10.0\Examination_Management_System.exe
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\bin\Debug\net10.0\Examination_Management_System.deps.json
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\bin\Debug\net10.0\Examination_Management_System.runtimeconfig.json
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\bin\Debug\net10.0\Examination_Management_System.dll
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\bin\Debug\net10.0\Examination_Management_System.pdb
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\obj\Debug\net10.0\Examination_Management_System.dll
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\obj\Debug\net10.0\refint\Examination_Management_System.dll
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\obj\Debug\net10.0\Examination_Management_System.pdb
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\obj\Debug\net10.0\Examination_Management_System.genruntimeconfig.cache
+D:\Faculty\ITI\C#\Assignments\Assignment_7\Examination_Management_System\Examination_Management_System\obj\Debug\net10.0\ref\Examination_Management_System.dll
